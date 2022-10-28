@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.person_form{
+    margin: 40px auto; 
+    max-width: 600px;
+    padding: 20px;
+    background-color:#3498db ;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 5px 5px 50px black; /*тень*/
+   
+}
+
+.person_form *{
+    margin-bottom: 20px;
+}
+
+/* .person_form *:last-child{
+    margin-bottom: 0;
+} */
+
+.person_form *+*{
+    margin-top: 20px;
+}
+
+.person_form input{
+    padding: 10px;
+    border: none;
+    border-bottom: 3px solid transparent;
+}
+
+.person_form input:focus{
+    outline: none;
+    border: 3px solid orangered ;
+  
+
+
+}
+
+.person_form textarea{
+    padding: 10px;
+    border: none;
+    resize: none;
+    height: 100px;
+    
+}
+.person_form textarea:focus{
+    outline: none;
+    border-bottom: 3px solid orangered;
+}
+
+.person_form select {
+    padding: 10px;
+}
+.person_form button{
+    background-color:#2ecc71 ;
+    border: none;
+    border-radius: 50px;
+    color: aliceblue;
+    padding: 20px;
+}
+
+
+
+
+
+

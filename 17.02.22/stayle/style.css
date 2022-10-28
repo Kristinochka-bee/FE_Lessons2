@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.main{           /*задаем стили квадрату*/
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color:#3498db ;
+    transition: background-color, box-shadow, transform, border-radius; /*что будем анимировать*/
+    transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);   /*тип анимации для высшезаданным элементов*/
+    transition-duration: 1s; /*время анимации*/
+
+    
+  
+
+}
+
+.main:hover{    /*стили меняются ,когда на них наводят курсор*/
+    background-color: #e74c3c;
+    /*transition: background-color 1s cubic-bezier(0.94,-0.3, 0.19, 1.56); /*анимация ,при наведении курсора на квадрат ,цвет изменяется плавно*/
+    transform: rotate(360deg);
+    box-shadow: 5px 5px 20px black;
+    border-radius: 50%; /*квадрат при скручивании становится круглым*/
+    
+
+    
+}
+
+.target{        /*задаем стили второму квадрату*/
+    margin: 200px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    /*transform: scale(0.5);              /*задает размер квадрата наполовину от первоначально заданного размера и все его содержимое, может быть текст или картинка*/
+    /*transition: width 1s cubic-bezier(0.94,-0.3, 0.19, 1.56);   /*анимация ,изменяется по ширине плавно*/
+                /* height 0.5s ease;                                анимация , изменяется по высоте плавно */
+    /*transform: rotate(45deg);          /*поворот на 45 градусов*/
+    /*transform: skew(20deg);            /*трансформация на 20 гр */       
+    transition: transform 1s cubic-bezier(0.35, -0.62, 0.58, 1.53);  /*анимация, кубик прокручивается*/
+
+    
+}
+
+
+.target:hover{                   /*увеличение квадрата на 300px при наведении курсора*/
+    /*width: 300px;
+    /* height: 300px; */
+    transform: rotate(45deg) scale(1.5);    /*чтоб эти стили отпработали вместе , тогда их нужно прописывать в одной строке без запятой*/
+}
+
+.box{
+    margin: 200px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    position: relative;
+}
+
+.box:after{                                           /*кв с контентом new надпись в правом верхнем углу квадрата*/
+    content: 'new';                                    /*содержимое квадрата*/
+    position: absolute;
+    background-color: #e74c3c;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    transform: translate(50% , -50%);
+    color: aliceblue;
+    
+}
+.box:hover:after{
+    border-radius: 20px;
+
+}
+
+
+
+
+
+.add_user_form{
+    background-color: #3498db;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 900px;                     /*ширина 900. Если эеран меньше 900 тогда ширина формы растягивается по всей ширине контента*/
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+.add_user_form input{
+    padding: 5px;
+    border: none;
+    transition: transform, box-shadow;             /*анимируется при нажатии курсора на поле ввода*/
+    transition-duration: 0.5s;
+}
+.add_user_form button{
+    padding: 5px;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    transition: transform, box-shadow;            /*анимируется при нажатии на кновку*/
+    transition-duration: 0.5s;
+    
+}
+
+.add_user_form input:focus{     
+    outline: none;
+    box-shadow: 0 0 10px black;
+    transform: scale(1.1); /*увеличится на 10% при  наведении курсора*/
+
+}

@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    
+    height: 70px;
+    background-color: #1ABC9C;
+    padding: 0 70px;
+                              
+    
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;                               /*wrapper элементы в нав будут центоваться в любом случае, даже при  сжатии экрана.Задавая класс wrapper другим блокам, мы задаем им такие же параметры как и тут в wrapper*/
+
+}
+
+nav .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;                         /*выравнваем по вертикали. т к  значение по авто row*/
+    height: 100%;                                /*текст и иконки по центру nav menu */  
+    padding: 0 70px;
+                               
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+                              
+}
+
+nav ul li+li{                                /*ссылаемся на следующие элементы кроме 1.го*. задаем отступы между текстовым меню*/
+    padding-left: 20px;
+}
+
+nav .nav-links a{
+    text-decoration: none;                     /*убираем подчеркиевание текста*/
+    color: black;
+    transition: box-shadow 0.5s;
+    padding: 5px;
+}
+
+nav .nav-links a:hover{
+box-shadow: 5px 5px 10px black;
+}
+
+
+
+#about-us{                                        /*решетка занчит,что это не классб а идентификатор id selector*/
+    display: flex;
+    
+
+    
+}
+
+#about-us>*{                                       /*задаем параметры не глубоким дочерним элементам ,т е ширину картинке и хедеру*/
+    width: 50%;                                    /*разделяем контент на 2 части по 50%*/
+}
+
+#about-us .header{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+#about-us .text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 70px;
+    text-align: justify;                                /*растягивает текст вдлину по странице*/
+ }
+
+ #projects{
+    background-color: #DCFFEB;
+    padding: 124px 0;
+ }
+
+ #projects h2{
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 50px;
+
+ }
+
+ #projects .card-container{
+    display: flex;
+    justify-content: space-between;
+ }
+
+ #projects .card{
+    width: 30%;
+    height: 400px;
+    background-image: url('../media/projects/gas.png');     /*накладываем картинки на контент*/
+    background-size: cover;                                  /*растягивает картинку чтоб перекрывал контент и обрезает ненужные края*/
+    position: relative;
+    overflow-y: hidden;                                         /*скрывает элементы , т е текст по У т е по вертикали */
+ }
+
+ #projects .info{
+    color: white;
+    position: absolute;
+    bottom: 0;                                                   /*этот блок-текст перенесется вниз*/
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);                      /*текст становится более читаемым и четким*/
+    transition: transform 0.5s;                                   /*анимация всплавания и исчезания текста*/
+    transform: translateY(100%);                                /*текст появляется при наведении курсора на картинку*/
+}
+
+#projects .card:hover .info{
+    transform: translateY(0);                                  /*текст отсутствует, когда наводим курсор элементы появляются по вертикали*/
+    
+}
+
+#projects .subheader{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+#projects .wrapper{
+    padding: 0 70px;
+}

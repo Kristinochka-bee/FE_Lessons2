@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "practic_form"
+		},
+		{
+			"path": "lesson6"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "lesson6"
+	}
+}

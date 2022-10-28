@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    background-color: #6d00d3;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+   
+}
+
+
+.nav_menu{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    
+}
+.nav_menu li:hover{
+    color: orange;
+    cursor: pointer;
+    border-bottom: 2px solid orange;          /*задаем нижние оранж подчеркивание*/
+
+}
+.nav_menu li{
+    color: #87cefa;
+    list-style: none;
+    font-size: 24px;
+    border-bottom: 2px solid transparent;       /*при наведении курсором на меню, не будет скачка текста*/
+
+}
+
+.header a{
+    text-decoration: none;                     /*убираем подчеркивание*/
+    color: aqua;
+    font-size: 32px;
+}
+
+.film_item img{
+    height: 350px;
+    width: 210px;    
+    object-fit: cover;                /*картинки не будут искажаться и отцентровываться*/                  
+}
+
+.films_container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.wrapper{
+    margin: 50px 250px;
+}
+
+h2{
+    color:  #6d00d3;
+}
